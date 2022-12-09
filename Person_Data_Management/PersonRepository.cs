@@ -51,5 +51,13 @@ namespace Person_Data_Management
                 Console.WriteLine($"{name} is Not Present in the List");
             }
         }
+        public static void Retrive_Records_For_Age_GreaterThan_Sixty(List<Person> listPersonInCity)
+        {
+            foreach (Person person in listPersonInCity.FindAll(e => e.Age > 60))
+            {
+                Console.WriteLine("Name : " + person.Name + " \t\tAge : " + person.Age);
+            }
+        }
+
     }
 }
