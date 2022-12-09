@@ -24,5 +24,17 @@ namespace Person_Data_Management
                 Console.WriteLine("Name : " + person.Name + " \t\tAge : " + person.Age);
             }
         }
+        public static void CheckingForTeenagerPersons(List<Person> listPersonInCity)
+        {
+            if (listPersonInCity.Any(e => e.Age >= 13 && e.Age < 19))
+            {
+                Console.WriteLine("YES, We have Some Teen-agers in the List");
+            }
+            else
+            {
+                Console.WriteLine("NO, We don't have Some Teen-agers in the List");
+
+            }
+        }
     }
 }
