@@ -36,5 +36,9 @@ namespace Person_Data_Management
 
             }
         }
+        public static void Retrive_Average_Age(List<Person> listPersonInCity)
+        {
+           Console.WriteLine("Average age is : " + listPersonInCity.Average(e => e.Age));
+        }
     }
 }
