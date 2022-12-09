@@ -38,9 +38,9 @@ namespace Person_Data_Management
         }
         public static void Retrive_Average_Age(List<Person> listPersonInCity)
         {
-           Console.WriteLine("Average age is : " + listPersonInCity.Average(e => e.Age));
+            Console.WriteLine("Average age is : " + listPersonInCity.Average(e => e.Age));
         }
-        public static void CheckFor_Name_Present_InList_Or_Not(List<Person> listPersonInCity,string name)
+        public static void CheckFor_Name_Present_InList_Or_Not(List<Person> listPersonInCity, string name)
         {
             if (listPersonInCity.Any(e => e.Name == name))
             {
@@ -53,11 +53,23 @@ namespace Person_Data_Management
         }
         public static void Retrive_Records_For_Age_GreaterThan_Sixty(List<Person> listPersonInCity)
         {
-            foreach (Person person in listPersonInCity.FindAll(e => e.Age > 60))
+            foreach (Person person in listPersonInCity.FindAll(e => e.Age >= 60))
             {
                 Console.WriteLine("Name : " + person.Name + " \t\tAge : " + person.Age);
             }
         }
-
+        public static void Remove_Name_From_List(List<Person> listPersonInCity, string name)
+        {
+            bool exists = false;
+            foreach (Person person in listPersonInCity.FindAll(e => e.Name == name))
+            {
+                exists = true;
+                listPersonInCity.Remove(person);
+            }
+            if (exists)
+            {
+                Console.WriteLine("Person Removed Sucessfully");
+            }
+        }
     }
 }

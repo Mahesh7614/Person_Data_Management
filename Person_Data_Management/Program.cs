@@ -11,6 +11,7 @@
             PersonRepository.Retrive_Average_Age(listPersonsInCity);
             PersonRepository.CheckFor_Name_Present_InList_Or_Not(listPersonsInCity, "Smith");
             PersonRepository.Retrive_Records_For_Age_GreaterThan_Sixty(listPersonsInCity);
+            PersonRepository.Remove_Name_From_List(listPersonsInCity, "Smith");
         }
     }
 }
