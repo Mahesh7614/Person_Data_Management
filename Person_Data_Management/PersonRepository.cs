@@ -40,5 +40,16 @@ namespace Person_Data_Management
         {
            Console.WriteLine("Average age is : " + listPersonInCity.Average(e => e.Age));
         }
+        public static void CheckFor_Name_Present_InList_Or_Not(List<Person> listPersonInCity,string name)
+        {
+            if (listPersonInCity.Any(e => e.Name == name))
+            {
+                Console.WriteLine($"{name} is Present in the List");
+            }
+            else
+            {
+                Console.WriteLine($"{name} is Not Present in the List");
+            }
+        }
     }
 }

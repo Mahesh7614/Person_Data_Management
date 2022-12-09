@@ -9,6 +9,7 @@
             PersonRepository.Retriving_Top_Two_Records_For_Age_LessThan_Sixty(listPersonsInCity);
             PersonRepository.CheckingForTeenagerPersons(listPersonsInCity);
             PersonRepository.Retrive_Average_Age(listPersonsInCity);
+            PersonRepository.CheckFor_Name_Present_InList_Or_Not(listPersonsInCity, "Smith");
         }
     }
 }
